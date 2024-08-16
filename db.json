@@ -1,0 +1,50 @@
+{
+"StudentScores": [
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "math": 85,
+    "science": 92,
+    "english": 88,
+    "history": 76,
+    "art": 95
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "math": 78,
+    "science": 81,
+    "english": 74,
+    "history": 85,
+    "art": 80
+  },
+  {
+    "id": 3,
+    "name": "Charlie Brown",
+    "math": 92,
+    "science": 89,
+    "english": 94,
+    "history": 90,
+    "art": 85
+  },
+  {
+    "id": 4,
+    "name": "Diana Prince",
+    "math": 88,
+    "science": 84,
+    "english": 91,
+    "history": 87,
+    "art": 92
+  },
+  {
+    "id": 5,
+    "name": "Ethan Hunt",
+    "math": 76,
+    "science": 79,
+    "english": 85,
+    "history": 83,
+    "art": 78
+  }
+]
+
+}
