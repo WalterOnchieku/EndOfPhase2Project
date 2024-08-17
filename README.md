@@ -11,8 +11,14 @@ To edit entries, go to the home section and click the edit button for the specif
 To delete a student's entries, click delete.
 To view the students' averave scores and grade, go to the grades section.
 
-the main files that make it work are: app.js - Contains the logic and also renders the content onto the page app.css - adds visual apeal to the document. db.json - contains objects to initially populate the table
+the main files that make it work are: 
+- App.js
+- GradeCalculator.js (under Components in the src subfolder)
+- Header.js (under Components in the src subfolder)
+- ScoreForm.js (under Components in the src subfolder)
+- StudentTable.js (under Components in the src subfolder)
+- App.css (styling)
 
-to view the botbattlr app, click here: https://visionary-pony-ca5e43.netlify.app/
+to view the Primary School Grading app, click here: https://sparkling-mooncake-a1f389.netlify.app/
 
-NOTE: Set the port number to 5000 when running json-server to prevent conflict with localhost
+NOTE: Set the port number to 8000 when running json-server to prevent conflict with localhost
