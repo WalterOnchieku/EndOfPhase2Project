@@ -61,19 +61,26 @@ nav ul li a:hover {
 
 input{
 height: 30px;
-width: 200px;
+width: 300px;
+border-radius: 5px;
 }
 button{
   height: 40px;
-  width: 210px;
+  width: 305px;
   background-color: #4CAF50;
   color: white;
   padding: 5px;
   margin: 5px;
+  border-radius: 5px;
 }
 .edit{
   width: 100px;
 }
 .delete{
   width: 100px;
+}
+.inputForm{
+  display: flex; 
+  justify-content: center;
+ 
 }

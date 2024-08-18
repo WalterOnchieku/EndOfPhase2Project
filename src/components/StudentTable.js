@@ -1,10 +1,13 @@
-
-
 import React, { useState } from 'react';
 
 const StudentTable = ({ students, setStudents }) => {
+  // State to manage the search term for filtering students
   const [searchTerm, setSearchTerm] = useState('');
+  
+  // State to manage the ID of the student currently being edited
   const [editingStudent, setEditingStudent] = useState(null);
+  
+  // State to hold the updated student data while editing
   const [updatedStudent, setUpdatedStudent] = useState({
     name: '',
     math: '',
@@ -14,25 +17,29 @@ const StudentTable = ({ students, setStudents }) => {
     art: ''
   });
 
+  // Function to handle the deletion of a student
   const handleDelete = (id) => {
     const updatedStudents = students.filter(student => student.id !== id);
     setStudents(updatedStudents);
   };
 
+  // Function to initiate editing mode for a specific student
   const handleEdit = (student) => {
     setEditingStudent(student.id);
     setUpdatedStudent({ ...student });
   };
 
+  // Function to handle the update of a student's information
   const handleUpdate = (e) => {
     e.preventDefault();
     const updatedStudents = students.map(student =>
       student.id === editingStudent ? updatedStudent : student
     );
     setStudents(updatedStudents);
-    setEditingStudent(null);
+    setEditingStudent(null); // Exit editing mode
   };
 
+  // Filter students based on the search term
   const filteredStudents = students.filter(student =>
     student.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -40,6 +47,7 @@ const StudentTable = ({ students, setStudents }) => {
   return (
     <div>
       <h2>Student Scores</h2>
+      {/* Search input for filtering students by name */}
       <input
         type="text"
         placeholder="Search by name"
@@ -47,6 +55,7 @@ const StudentTable = ({ students, setStudents }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         style={{ marginBottom: '20px', padding: '10px', width: '100%' }}
       />
+      {/* Table displaying the list of students and their scores */}
       <table border="1" cellPadding="10" cellSpacing="0" width="100%">
         <thead>
           <tr>
@@ -69,7 +78,9 @@ const StudentTable = ({ students, setStudents }) => {
               <td>{student.history}</td>
               <td>{student.art}</td>
               <td>
+                {/* Button to enable editing mode for the student */}
                 <button className="edit" onClick={() => handleEdit(student)}>Edit</button>
+                {/* Button to delete the student */}
                 <button className="delete" onClick={() => handleDelete(student.id)}>Delete</button>
               </td>
             </tr>
@@ -77,6 +88,7 @@ const StudentTable = ({ students, setStudents }) => {
         </tbody>
       </table>
 
+      {/* Form for editing a student's information */}
       {editingStudent && (
         <form onSubmit={handleUpdate}>
           <h3>Edit Student</h3>
