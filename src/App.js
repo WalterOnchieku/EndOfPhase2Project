@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the student data from the JSON server when the component mounts
-    fetch('http://localhost:8000/StudentScores')
+    fetch('https://json-server-template-1yj2.onrender.com/StudentScores')
       .then((response) => response.json()) // Parse the JSON data
       .then((data) => setStudents(data)); // Set the fetched data into the students state
   }, []); // Empty dependency array ensures this effect runs only once after the first render

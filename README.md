@@ -21,4 +21,4 @@ the main files that make it work are:
 
 to view the Primary School Grading app, click here: https://sparkling-mooncake-a1f389.netlify.app/
 
-NOTE: Set the port number to 8000 when running json-server to prevent conflict with localhost
+NOTE: db.json has been deployed on Render. In case of any long periods of inactivity, there will be a delay of 50 seconds when running the app.
